@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pagina di prova No Miami Spoiler</title>
+    <style>
+      body { max-width: 640px; margin: 24px auto; font: 15px/1.5 system-ui, sans-serif; }
+      li { margin: 8px 0; padding: 8px; background: #f3f3f3; border-radius: 8px; list-style: none; }
+      .card { margin: 8px 0; padding: 12px; border: 1px solid #ddd; border-radius: 8px; }
+    </style>
+  </head>
+  <body>
+    <h1>Notizie gaming di oggi</h1>
+    <ul>
+      <li id="n1">GTA 6 ending explained: why Jason does what he does</li>
+      <li id="n2">GTA 6 review (no spoilers): the best open world ever</li>
+      <li id="n3">Il finale di GTA VI mi ha distrutto, non ci credo</li>
+      <li id="n4">GTA 6 final trailer is out today</li>
+      <li id="n5">Ricetta della pasta e patate</li>
+      <li id="n6">Jason Duval e il colpo a Port Gellhorn</li>
+    </ul>
+    <article class="card">
+      <h3>Novità dal mondo</h3>
+      <p id="n7">In GTA VI Lucia muore nella missione finale. <a href="https://example.com">Leggi tutto</a></p>
+    </article>
+    <p id="n8">Commento: oggi Vice City è bellissima</p>
+    <div id="late"></div>
+    <script>
+      // Contenuto che arriva dopo (come lo scroll infinito)
+      setTimeout(() => {
+        document.getElementById('late').innerHTML = '<p id="n9">Leak: gta6 Jason betrays Lucia at the end</p>';
+      }, 800);
+    </script>
+  </body>
+</html>

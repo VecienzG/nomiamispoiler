@@ -1,0 +1,44 @@
+# Ristudia la GTA Wiki ogni 6 ore e pubblica la lista cifrata su GitHub Pages (docs/wiki.json)
+name: wiki-sync
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wiki-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # dizionario inglese: serve a scartare i nomi singoli che sono parole reali
+      - run: sudo apt-get install -y -qq wamerican
+
+      - run: node scripts/wiki-sync.mjs
+
+      - run: node test/detector.test.mjs
+
+      - name: Pubblica se la lista è cambiata
+        run: |
+          git config user.name "nms-wiki-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/wiki.json extension/src/wiki-data.js
+          if git diff --cached --quiet; then
+            echo "Nessun nome nuovo"
+          else
+            git commit -m "wiki: lista aggiornata"
+            git push
+          fi

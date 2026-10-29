@@ -1,0 +1,341 @@
+/* Stile "menu di gioco": tessere quadrate di vetro, selezione bianca, bagliori rosa e acqua */
+@font-face {
+  font-family: 'NMS Condensed';
+  src: url('../fonts/BarlowCondensed-500.woff2') format('woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'NMS Condensed';
+  src: url('../fonts/BarlowCondensed-600.woff2') format('woff2');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'NMS Condensed';
+  src: url('../fonts/BarlowCondensed-700.woff2') format('woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'NMS Text';
+  src: url('../fonts/Barlow-400.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'NMS Text';
+  src: url('../fonts/Barlow-500.woff2') format('woff2');
+  font-weight: 500;
+}
+
+:root {
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.62);
+  --glass: rgba(255, 255, 255, 0.08);
+  --glass-hover: rgba(255, 255, 255, 0.14);
+  --edge: rgba(255, 255, 255, 0.14);
+  --tab: rgba(16, 16, 24, 0.72);
+  --pink: #ffc2d0;
+  --glow-pink: rgba(255, 140, 185, 0.85);
+  --teal: #4fd6c4;
+  --peach: #ffd4a8;
+  --ink: #141414;
+  --condensed: 'NMS Condensed', 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --body: 'NMS Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  position: relative;
+  width: 340px;
+  margin: 0;
+  padding: 18px 14px 14px;
+  /* il tramonto sfocato dietro al menu */
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 3px),
+    radial-gradient(90% 40% at 80% 100%, rgba(214, 120, 90, 0.35), transparent 70%),
+    linear-gradient(180deg, #121a30 0%, #252640 30%, #3e2f45 62%, #5a3f3c 100%);
+  color: var(--text);
+  font: 400 13px/1.4 var(--body);
+}
+
+.hud {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.bar {
+  display: block;
+  height: 5px;
+}
+
+.bar.pink {
+  width: 56px;
+  background: var(--pink);
+}
+
+.bar.teal {
+  width: 5px;
+  background: var(--teal);
+}
+
+header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 4px 0 14px;
+}
+
+header img {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: -2px;
+}
+
+h1 {
+  margin: 0;
+  font: 700 24px/1 var(--condensed);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 4px 0 0;
+  color: var(--muted);
+  font: 600 13px/1 var(--condensed);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.countdown .i {
+  color: var(--pink);
+}
+
+/* ---- Schede livello (come WEAPONS / ITEMS) ---- */
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.tabs button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 4px 6px;
+  border: 0;
+  background: var(--tab);
+  color: var(--text);
+  font: 700 16px/1 var(--condensed);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  background: rgba(40, 40, 54, 0.85);
+}
+
+.tabs button[aria-checked='true'] {
+  background: #fff;
+  color: var(--ink);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 9px) 100%, 0 100%);
+}
+
+.hint {
+  margin: 8px 0 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.hint.center {
+  text-align: center;
+}
+
+/* ---- Tessere ---- */
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  min-width: 0;
+  aspect-ratio: 1 / 0.92;
+  padding: 8px 4px;
+  border: 1px solid var(--edge);
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.tile:hover {
+  background: var(--glass-hover);
+}
+
+.tile .i {
+  margin-bottom: 4px;
+  opacity: 0.75;
+}
+
+.tile b {
+  font: 700 17px/1 var(--condensed);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.tile span {
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--muted);
+  font: 600 12px/1.1 var(--condensed);
+  letter-spacing: 0.04em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tile[aria-pressed='true'] {
+  border: 0;
+  outline: 3px solid #fff;
+  outline-offset: -3px;
+  background:
+    radial-gradient(90% 38% at 50% 0%, var(--glow-pink), transparent 100%),
+    linear-gradient(180deg, #f3eef1 0%, #d9d4d8 100%);
+  color: var(--ink);
+}
+
+.tile[aria-pressed='true'] .i {
+  opacity: 1;
+}
+
+.tile[aria-pressed='true'] span {
+  color: rgba(20, 20, 20, 0.6);
+}
+
+.tile:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.tile:disabled:hover {
+  background: var(--glass);
+}
+
+/* ---- Pulsante e campo ---- */
+
+.cta {
+  display: block;
+  width: 100%;
+  margin: -4px 0 12px;
+  padding: 9px 12px 8px;
+  border: 0;
+  background: #fff;
+  color: var(--ink);
+  font: 700 16px/1 var(--condensed);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  cursor: pointer;
+}
+
+.cta:disabled {
+  opacity: 0.75;
+  cursor: progress;
+}
+
+.field {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font: 600 13px/1 var(--condensed);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--edge);
+  border-radius: 0;
+  background: var(--glass);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+}
+
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.tabs button:focus-visible,
+.tile:focus-visible,
+.cta:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+/* ---- Contatore (come il caricatore "20 80") ---- */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.counter {
+  display: grid;
+  min-width: 112px;
+  border: 1px solid var(--edge);
+  background: var(--glass);
+  text-align: center;
+}
+
+.counter b {
+  padding: 8px 10px 4px;
+  background: radial-gradient(70% 55% at 50% 100%, rgba(79, 214, 196, 0.75), transparent 100%);
+  font: 700 26px/1 var(--condensed);
+}
+
+.counter span {
+  padding: 4px 8px;
+  background: rgba(16, 16, 24, 0.78);
+  font: 600 12px/1.1 var(--condensed);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: right;
+}

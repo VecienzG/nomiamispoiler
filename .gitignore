@@ -1,0 +1,7 @@
+node_modules/
+dist/
+test/e2e.png
+.DS_Store
+test/popup.png
+test/youtube.png
+data/*.local.json

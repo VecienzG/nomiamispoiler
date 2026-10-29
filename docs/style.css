@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'NMS Condensed';
+  src: url('BarlowCondensed-700.woff2') format('woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'NMS Text';
+  src: url('Barlow-400.woff2') format('woff2');
+  font-weight: 400;
+}
+
+:root {
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.68);
+  --glass: rgba(255, 255, 255, 0.08);
+  --edge: rgba(255, 255, 255, 0.14);
+  --pink: #ffc2d0;
+  --teal: #4fd6c4;
+  --ink: #141414;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 48px 16px;
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 3px),
+    radial-gradient(80% 40% at 80% 100%, rgba(214, 120, 90, 0.35), transparent 70%),
+    linear-gradient(180deg, #121a30 0%, #252640 30%, #3e2f45 62%, #5a3f3c 100%) fixed;
+  color: var(--text);
+  font: 400 16px/1.6 'NMS Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.hud {
+  position: fixed;
+  top: 16px;
+  left: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.hud i {
+  display: block;
+  height: 6px;
+}
+
+.hud i:first-child {
+  width: 90px;
+  background: var(--pink);
+}
+
+.hud i:last-child {
+  width: 6px;
+  background: var(--teal);
+}
+
+header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+header img {
+  width: 64px;
+  height: 64px;
+  outline: 3px solid #fff;
+  outline-offset: -3px;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: 'NMS Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1;
+}
+
+h2 {
+  margin: 32px 0 8px;
+  font-size: 24px;
+}
+
+.sub {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-family: 'NMS Condensed', 'Arial Narrow', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.card {
+  padding: 16px 20px;
+  border: 1px solid var(--edge);
+  background: var(--glass);
+}
+
+p,
+li {
+  color: var(--muted);
+}
+
+strong {
+  color: var(--text);
+}
+
+a {
+  color: var(--pink);
+}
+
+a.cta {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 22px 9px;
+  background: #fff;
+  color: var(--ink);
+  font: 700 18px/1 'NMS Condensed', 'Arial Narrow', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+}
+
+footer {
+  margin-top: 48px;
+  color: var(--muted);
+  font-size: 13px;
+}

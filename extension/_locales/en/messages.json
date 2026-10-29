@@ -1,0 +1,130 @@
+{
+  "extName": {
+    "message": "No Miami Spoiler"
+  },
+  "extDescription": {
+    "message": "Blur GTA VI spoilers on YouTube, Reddit, X, Google and every site. On-device AI spots spoilers even without keywords."
+  },
+  "labelSpoiler": {
+    "message": "Possible GTA VI spoiler · click to show"
+  },
+  "labelGta": {
+    "message": "GTA VI content hidden · click to show"
+  },
+  "labelCustom": {
+    "message": "Blocked word · click to show"
+  },
+  "labelChecking": {
+    "message": "Checking for spoilers…"
+  },
+  "protectionOn": {
+    "message": "Protection on"
+  },
+  "levelTitle": {
+    "message": "Protection level"
+  },
+  "levelLight": {
+    "message": "Light"
+  },
+  "levelMedium": {
+    "message": "Smart"
+  },
+  "levelParanoid": {
+    "message": "Paranoid"
+  },
+  "levelLightHint": {
+    "message": "Hides only obvious spoilers: endings, deaths, twists, leaks."
+  },
+  "levelMediumHint": {
+    "message": "Obvious spoilers plus doubtful cases, checked by the AI."
+  },
+  "levelParanoidHint": {
+    "message": "Hides everything about GTA VI. News included."
+  },
+  "aiTitle": {
+    "message": "Spoiler AI"
+  },
+  "aiDownload": {
+    "message": "Download the AI model (one time)"
+  },
+  "aiDownloading": {
+    "message": "Downloading…"
+  },
+  "aiState_available": {
+    "message": "active"
+  },
+  "aiState_downloadable": {
+    "message": "to download"
+  },
+  "aiState_downloading": {
+    "message": "downloading"
+  },
+  "aiState_unavailable": {
+    "message": "not supported"
+  },
+  "aiState_unsupported": {
+    "message": "not available"
+  },
+  "aiHint_available": {
+    "message": "Runs on your computer. Nothing is sent anywhere. Used in Smart mode."
+  },
+  "aiHint_downloadable": {
+    "message": "Chrome can download its built-in AI. Needs a recent computer and some free disk space."
+  },
+  "aiHint_downloading": {
+    "message": "Keep this window open until it finishes."
+  },
+  "aiHint_unavailable": {
+    "message": "This computer can't run Chrome's AI. Keyword protection still works."
+  },
+  "aiHint_unsupported": {
+    "message": "Needs a recent Chrome on desktop. Keyword protection still works."
+  },
+  "pauseSite": {
+    "message": "Pause on"
+  },
+  "customTitle": {
+    "message": "Extra words to block"
+  },
+  "customPlaceholder": {
+    "message": "e.g. a streamer's name, comma separated"
+  },
+  "blockedTotal": {
+    "message": "spoilers blocked"
+  },
+  "disclaimer": {
+    "message": "Not affiliated with Rockstar Games. Names studied from GTA Wiki."
+  },
+  "countdownDays": {
+    "message": "$DAYS$ days to launch",
+    "placeholders": {
+      "days": {
+        "content": "$1"
+      }
+    }
+  },
+  "countdownTomorrow": {
+    "message": "Launch is tomorrow!"
+  },
+  "countdownOut": {
+    "message": "It's out. Eyes open."
+  },
+  "tileProtection": {
+    "message": "Protection"
+  },
+  "tileAi": {
+    "message": "AI"
+  },
+  "tilePause": {
+    "message": "Pause site"
+  },
+  "stateOn": {
+    "message": "On"
+  },
+  "stateOff": {
+    "message": "Off"
+  },
+  "stateNoSite": {
+    "message": "No site"
+  }
+}

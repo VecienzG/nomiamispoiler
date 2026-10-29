@@ -1,0 +1,65 @@
+.nms-rel {
+  position: relative !important;
+}
+
+.nms-blocked {
+  cursor: pointer !important;
+  min-height: 2.4em;
+}
+
+/* Il testo "nudo" non si può sfocare con filter: diventa trasparente con un'ombra sfocata */
+.nms-blocked:not(.nms-whole),
+.nms-blocked:not(.nms-whole) * {
+  color: transparent !important;
+  text-shadow: 0 0 9px rgba(128, 128, 128, 0.85) !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.nms-blocked:not(.nms-whole) ::selection {
+  background: transparent !important;
+}
+
+.nms-blocked:not(.nms-whole) > * {
+  filter: blur(14px) grayscale(0.4) !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.nms-blocked.nms-whole {
+  filter: blur(14px) grayscale(0.4) !important;
+}
+
+.nms-blocked:not(.nms-whole)::after {
+  content: attr(data-nms-label);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2147483000;
+  max-width: 92%;
+  overflow: hidden;
+  padding: 7px 14px 6px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 0;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' %3E %3Cpath d='M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49' /%3E %3Cpath d='M14.084 14.158a3 3 0 0 1-4.242-4.242' /%3E %3Cpath d='M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143' /%3E %3Cpath d='m2 2 20 20' /%3E %3C/svg%3E") no-repeat 11px center / 14px 14px,
+    radial-gradient(90% 70% at 50% 0%, rgba(255, 140, 185, 0.55), transparent 100%),
+    rgba(18, 18, 26, 0.86);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  text-shadow: none;
+  font: 700 14px/1.1 'NMS Condensed', 'Barlow Condensed', 'Arial Narrow', sans-serif-condensed, sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.nms-blocked[data-nms-reason='ai']::after {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' %3E %3Cpath d='M12 18V5' /%3E %3Cpath d='M15 13a4.17 4.17 0 01-3-4 4.17 4.17 0 01-3 4' /%3E %3Cpath d='M17.707 6.294A3 3 0 1012 5a3 3 0 10-5.707 1.294' /%3E %3Cpath d='M17.996 5.125a4 4 0 012.526 5.77' /%3E %3Cpath d='M18 18a4 4 0 002-7.465' /%3E %3Cpath d='M19.967 17.482a4 4 0 11-7.967.517 4 4 0 11-7.967-.517' /%3E %3Cpath d='M6 18a4 4 0 01-2-7.465' /%3E %3Cpath d='M6.004 5.125a4 4 0 00-2.526 5.77' /%3E %3C/svg%3E") no-repeat 11px center / 14px 14px,
+    radial-gradient(90% 70% at 50% 0%, rgba(79, 214, 196, 0.55), transparent 100%),
+    rgba(18, 18, 26, 0.86);
+}

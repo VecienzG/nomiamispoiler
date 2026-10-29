@@ -1,0 +1,130 @@
+{
+  "extName": {
+    "message": "No Miami Spoiler"
+  },
+  "extDescription": {
+    "message": "Sfoca gli spoiler di GTA VI su YouTube, Reddit, X, Google e ovunque. L'AI sul tuo PC li riconosce anche senza parole chiave."
+  },
+  "labelSpoiler": {
+    "message": "Possibile spoiler GTA VI · clicca per vedere"
+  },
+  "labelGta": {
+    "message": "Contenuto GTA VI nascosto · clicca per vedere"
+  },
+  "labelCustom": {
+    "message": "Parola bloccata · clicca per vedere"
+  },
+  "labelChecking": {
+    "message": "Controllo spoiler…"
+  },
+  "protectionOn": {
+    "message": "Protezione attiva"
+  },
+  "levelTitle": {
+    "message": "Livello di protezione"
+  },
+  "levelLight": {
+    "message": "Leggero"
+  },
+  "levelMedium": {
+    "message": "Medio"
+  },
+  "levelParanoid": {
+    "message": "Paranoico"
+  },
+  "levelLightHint": {
+    "message": "Nasconde solo gli spoiler evidenti: finale, morti, colpi di scena, leak."
+  },
+  "levelMediumHint": {
+    "message": "Spoiler evidenti più i casi dubbi, che controlla l'AI."
+  },
+  "levelParanoidHint": {
+    "message": "Nasconde tutto ciò che parla di GTA VI. Anche le notizie."
+  },
+  "aiTitle": {
+    "message": "AI anti-spoiler"
+  },
+  "aiDownload": {
+    "message": "Scarica il modello AI (una volta sola)"
+  },
+  "aiDownloading": {
+    "message": "Download…"
+  },
+  "aiState_available": {
+    "message": "attiva"
+  },
+  "aiState_downloadable": {
+    "message": "da scaricare"
+  },
+  "aiState_downloading": {
+    "message": "in download"
+  },
+  "aiState_unavailable": {
+    "message": "non supportata"
+  },
+  "aiState_unsupported": {
+    "message": "non disponibile"
+  },
+  "aiHint_available": {
+    "message": "Gira sul tuo computer, non invia niente a nessuno. Si usa nel livello Medio."
+  },
+  "aiHint_downloadable": {
+    "message": "Chrome può scaricare la sua AI integrata. Serve un computer recente e un po' di spazio libero."
+  },
+  "aiHint_downloading": {
+    "message": "Tieni aperta questa finestra fino alla fine."
+  },
+  "aiHint_unavailable": {
+    "message": "Questo computer non regge l'AI di Chrome. La protezione a parole chiave funziona lo stesso."
+  },
+  "aiHint_unsupported": {
+    "message": "Serve Chrome aggiornato su computer. La protezione a parole chiave funziona lo stesso."
+  },
+  "pauseSite": {
+    "message": "Pausa su"
+  },
+  "customTitle": {
+    "message": "Parole extra da bloccare"
+  },
+  "customPlaceholder": {
+    "message": "es. il nome di uno streamer, separate da virgola"
+  },
+  "blockedTotal": {
+    "message": "spoiler bloccati"
+  },
+  "disclaimer": {
+    "message": "Non affiliato a Rockstar Games. Nomi studiati da GTA Wiki."
+  },
+  "countdownDays": {
+    "message": "Mancano $DAYS$ giorni all'uscita",
+    "placeholders": {
+      "days": {
+        "content": "$1"
+      }
+    }
+  },
+  "countdownTomorrow": {
+    "message": "Esce domani!"
+  },
+  "countdownOut": {
+    "message": "È uscito. Occhi aperti."
+  },
+  "tileProtection": {
+    "message": "Protezione"
+  },
+  "tileAi": {
+    "message": "AI"
+  },
+  "tilePause": {
+    "message": "Pausa sito"
+  },
+  "stateOn": {
+    "message": "Attiva"
+  },
+  "stateOff": {
+    "message": "Spenta"
+  },
+  "stateNoSite": {
+    "message": "Nessun sito"
+  }
+}
